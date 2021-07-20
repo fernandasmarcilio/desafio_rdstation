@@ -24,6 +24,15 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
 .container {
   width: 100%;
   max-width: 720px;
@@ -39,6 +48,7 @@ a {
   cursor: pointer;
   border: none;
   display: flex;
+  text-transform: uppercase;
   background: var(--color-primary);
   transition: background 0.3s;
 }
@@ -54,7 +64,6 @@ a {
 .button-container {
   display: flex;
   flex-direction: column;
-  margin-left: 16px;
 }
 
 .button-container::after {
