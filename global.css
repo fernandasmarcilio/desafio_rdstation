@@ -17,6 +17,11 @@ body {
   padding: 0;
   margin: 0;
   background-color: var(--color-white);
+  color: var(--color-gray-100);
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
