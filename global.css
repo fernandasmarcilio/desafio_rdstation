@@ -28,7 +28,7 @@ a {
   width: 100%;
   max-width: 720px;
   margin: auto;
-  padding: 0 24px;
+  padding: 0 24px !important;
   box-sizing: border-box;
 }
 
@@ -148,7 +148,7 @@ a {
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 1140px;
+    max-width: 720px;
   }
 
   .heading-lg {
@@ -173,5 +173,17 @@ a {
 
   .body-sm {
     font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
   }
 }
