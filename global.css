@@ -37,7 +37,7 @@ h6 {
   width: 100%;
   max-width: 720px;
   margin: auto;
-  padding: 0 24px !important;
+  padding: 0 24px;
   box-sizing: border-box;
 }
 
@@ -160,6 +160,7 @@ h6 {
 @media screen and (min-width: 768px) {
   .container {
     max-width: 720px;
+    padding: 0;
   }
 
   .heading-lg {

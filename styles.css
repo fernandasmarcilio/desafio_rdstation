@@ -96,6 +96,30 @@ footer {
   border-bottom: 1px solid var(--color-gray-100);
 }
 
+.section-create-account {
+  margin: 120px auto;
+}
+
+.section-create-account-background {
+  background: url(/assets/background.svg) no-repeat center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--color-white);
+  padding: 40px 0;
+}
+
+.section-create-account h2 {
+  width: 60%;
+}
+
+.section-create-account p {
+  width: 70%;
+  margin-bottom: 40px;
+}
+
 .video-section {
   background: var(--color-gray-10);
   padding: 18px 0;
@@ -202,6 +226,15 @@ footer {
   .footer-container p {
     align-self: center;
     padding: 0 0 24px 0;
+  }
+
+  .section-create-account h2 {
+    width: 75%;
+  }
+
+  .section-create-account p {
+    width: 100%;
+    margin-bottom: 40px;
   }
 
   .video-section .container {
