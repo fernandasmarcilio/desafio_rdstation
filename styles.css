@@ -96,6 +96,33 @@ footer {
   border-bottom: 1px solid var(--color-gray-100);
 }
 
+.cards-section h2 {
+  width: 50%;
+}
+
+.cards-section-container {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 64px;
+}
+
+.cards-section-card {
+  box-shadow: 0px 4px 12px rgba(33, 36, 41, 0.14);
+  border-radius: 2px;
+  padding: 24px;
+}
+
+.cards-section-icon-container {
+  background: var(--color-gray-10);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .section-create-account {
   margin: 120px auto;
 }
@@ -226,6 +253,35 @@ footer {
   .footer-container p {
     align-self: center;
     padding: 0 0 24px 0;
+  }
+
+  .cards-section {
+    overflow-x: hidden;
+  }
+
+  .cards-section h2 {
+    width: 100%;
+  }
+
+  .cards-section-container {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    margin-top: 64px;
+    justify-content: space-between;
+    align-items: center;
+    width: 620%;
+    height: 500px;
+  }
+
+  .cards-section-card {
+    height: 378px;
+    width: 100%;
+  }
+
+  .cards-section-icon-container {
+    width: 48px;
+    height: 48px;
   }
 
   .section-create-account h2 {
