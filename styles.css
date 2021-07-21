@@ -4,6 +4,7 @@ header {
   height: 80px;
   width: 100%;
   background: var(--color-white);
+  z-index: 100;
 }
 
 .logo {
@@ -95,6 +96,41 @@ footer {
   border-bottom: 1px solid var(--color-gray-100);
 }
 
+.video-section {
+  background: var(--color-gray-10);
+  padding: 18px 0;
+}
+
+.video-section .container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+}
+
+.video-section .container div .button-container {
+  margin-top: 40px;
+  width: 90%;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 24px;
+}
+
+.video-container button {
+  position: absolute;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.video-container button img {
+  width: 70%;
+}
+
 .section-logos .section-logos-info-container {
   grid-area: info;
 }
@@ -166,6 +202,22 @@ footer {
   .footer-container p {
     align-self: center;
     padding: 0 0 24px 0;
+  }
+
+  .video-section .container {
+    flex-direction: column;
+  }
+
+  .video-container {
+    margin: 0;
+  }
+
+  .video-container img {
+    width: 100%;
+  }
+
+  .video-container button img {
+    width: 50%;
   }
 
   .section-logos {
