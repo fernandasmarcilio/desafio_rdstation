@@ -93,7 +93,51 @@ footer {
 
 .footer-container p a {
   color: var(--color-gray-100);
-  border-bottom: 1px solid var(--color-gray-100);
+  text-decoration: underline;
+}
+
+.results-section {
+  margin-bottom: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.results-section::after {
+  content: "";
+  width: 100%;
+  height: calc(100% + 40px);
+  background: var(--color-gray-10);
+  position: absolute;
+  z-index: -1;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 54% 100%, 0 10%);
+}
+
+.results-section .container {
+  display: flex;
+  gap: 120px;
+}
+
+.results-section .container img {
+  clip-path: polygon(0 0, 69% 0, 100% 22%, 100% 100%, 0 100%);
+}
+
+.results-section-list ul {
+  padding-left: 30px;
+}
+
+.results-section-list ul li {
+  list-style-image: url(assets/icons/check.svg);
+  margin-bottom: 24px;
+}
+
+.results-section-list ul li span {
+  font-weight: 700;
+}
+
+.results-section-list ul li a {
+  color: var(--color-primary);
+  text-decoration: underline;
 }
 
 .cards-section h2 {
@@ -253,6 +297,19 @@ footer {
   .footer-container p {
     align-self: center;
     padding: 0 0 24px 0;
+  }
+
+  .results-section .container {
+    gap: 0;
+  }
+
+  .results-section::after {
+    height: 140%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 60%);
+  }
+
+  .results-section .container {
+    flex-direction: column-reverse;
   }
 
   .cards-section {
