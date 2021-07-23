@@ -9,21 +9,32 @@
   <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@800;900&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="global.css">
   <link rel="stylesheet" href="styles.css">
+  <script src="scripts/input.js" defer></script>
   <title>RD Station</title>
 </head>
 <body>
   <header>
     <div class="container center">
-      <img class="logo" src="assets/logo-rd-station-default.png" alt="RD Station Logo">
-      <nav class="menu">
-        <ul class="center">
+      
+      <div class="logo-header-container">
+        <img class="logo" src="assets/logo.svg" alt="RD Station Logo">
+        <div>
+          <input type="checkbox" name="bt-menu" id="bt-menu">
+          <label for="bt-menu" onclick="openMenu()">
+            <img src="assets/icons/menu.svg" />
+          </label>
+        </div>
+      </div>
+
+      <nav class="menu" id="menu">
+        <ul class="center menu-list" id="menu-list">
           <li class="body-md">Menu 1</li>
           <li class="body-md">Menu 2</li>
           <li class="body-md">Menu 3</li>
           <li class="body-md">Menu 4</li>
           <li class="body-md">Menu 5</li>
         </ul>
-        <div class="menu-buttons-container">
+        <div class="menu-buttons-container" id="menu-buttons-container">
           <div class="button-container">
             <button class="body-md button-secondary">BUTTON</button>
           </div>
@@ -32,10 +43,9 @@
           </div>
         </div>
       </nav>
-      <div class="menu-burger">
-        <img src="assets/icons/menu.svg" />
-      </div>
+
     </div>
+
   </header>
   <section class="hero-section">
     <div class="container">
@@ -58,26 +68,26 @@
 
         <div class="divider"></div>
 
-        <form action="">
+        <form name="form" id="form">
 
           <div class="input-container">
             <label for="name">Diga, qual seu nome?</label>
-            <input type="text" name="name" placeholder="Insira seu nome">
+            <input required type="text" name="name" id="name" placeholder="Insira seu nome">
           </div>
 
           <div class="input-container">
             <label for="email">Seu email de trabalho</label>
-            <input type="email" name="email" placeholder="Insira seu e-mail">
+            <input required type="email" name="email" placeholder="Insira seu e-mail">
           </div>
 
           <div class="input-container">
             <label for="phone">Seu telefone</label>
-            <input type="phone" name="phone" placeholder="Insira seu número de telefone com DDD">
+            <input required id="tel" name="tel" maxlength="15" pattern="\(\d{2}\)\s*\d{4,5}-\d{4}" placeholder="Insira seu número de telefone com DDD">
           </div>
 
           <div class="input-container">
             <label for="occupation_position">Seu cargo de ocupação</label>
-            <select name="occupation_position">
+            <select name="occupation_position" required>
               <option value="" disabled selected>Selecione seu cargo</option>
               <option value="socio_ceo_proprietario">Sócio(a) / CEO / Proprietário(a)</option>>
               <option value="diretor_vendas">Diretor(a) de Vendas</option>>
@@ -98,25 +108,27 @@
           <div class="input-container">
             <label for="password">Crie uma senha</label>
             <div class="input-password-container">
-              <input type="password" name="password" placeholder="••••••••">
-              <img src="/assets/icons/close_eye.svg" alt="icon eye visibility">
+              <input required type="password" name="password" placeholder="••••••••" id="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,10}">
+              <img src="/assets/icons/close_eye.svg" alt="icon eye visibility" id="show_password">
             </div>
           </div>
 
           <div class="input-container">
             <label for="confirm_password">Confirme sua senha</label>
             <div class="input-password-container">
-              <input type="text" name="confirm_password" placeholder="••••••••">
-              <img src="/assets/icons/close_eye.svg" alt="icon eye visibility">
+              <input required type="password" name="confirm_password" placeholder="••••••••" id="confirm_password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,10}">
+              <img src="/assets/icons/close_eye.svg" alt="icon eye visibility" id="show_confirm_password">
             </div>
+            <span id="confirm_password_error">Senhas diferentes</span>
           </div>
 
           <div class="input-container">
             <div class="radio-container">
-              <input type="radio" name="url" value="true">
+              <input type="radio" name="url" value="true" required>
               <label for="url">Meu site é</label>
             </div>
-            <input type="text" name="url_value" placeholder="Insira o endereço do seu site">
+            <input type="url" name="url_value" placeholder="Insira o endereço do seu site">
+            <span id="url_value_error">Insira a URL do seu site</span>
             <div class="radio-container">
               <input type="radio" name="url" value="false">
               <label for="url">Ainda não tenho site</label>
@@ -131,7 +143,7 @@
 
 
           <div class="button-container">
-            <button class="body-md button-highlight">criar minha conta</button>
+            <button class="body-md button-highlight" type="submit">criar minha conta</button>
           </div>
         </form>
       </div>
@@ -215,9 +227,9 @@
     <div class="section-create-account-background">
       <h2 class="heading-md" >Por que mais de 25.000 empresas escolheram o RD Station?</h2>
       <p class="body-md" >Combinamos nossos produtos de Marketing e Vendas com pessoas que se importam com seus resultados e um ecossistema que apoia o seu negócio do planejamento à prática.</p>
-      <div class="button-container">
+      <a class="button-container" href="https://app.rdstation.com.br/signup" target="_blank">
         <button class="body-md button-highlight">criar conta gratuita</button>
-      </div>
+      </a>
     </div>
   </section>
 
@@ -287,16 +299,16 @@
       </div>
     </div>
     <div class="section-logos-button">
-      <div class="button-container">
+      <a class="button-container" href="https://app.rdstation.com.br/signup" target="_blank">
         <button class="body-md">criar conta gratuita</button>
-      </div>
+      </a>
     </div>
   </section>
   
   <footer>
     <div class="container footer-container">
       <div class="footer-social">
-        <img class="logo" src="assets/logo-rd-station-default.png" />
+        <img class="logo" src="assets/logo.svg" />
         <div class="footer-social-list">
           <a href="https://twitter.com/rd_station" target="_blank">
             <img src="assets/icons/brands/twitter.svg" />

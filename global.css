@@ -56,6 +56,10 @@ select {
   line-height: 150%;
 }
 
+input[type="radio"] {
+  box-shadow: none;
+}
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -64,10 +68,36 @@ select {
     calc(100% - 12px) !important;
 }
 
+select option {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+select:invalid {
+  color: var(--color-gray-70);
+}
+
+::placeholder {
+  color: var(--color-gray-70);
+}
+
 .input-container {
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
+}
+
+.input-container span {
+  display: block;
+  opacity: 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: red;
+  padding: 4px 0;
 }
 
 .input-container .radio-container {
@@ -96,7 +126,7 @@ select {
 .input-password-container img {
   position: absolute;
   cursor: pointer;
-  margin-right: 12px;
+  padding: 12px;
 }
 
 .container {
