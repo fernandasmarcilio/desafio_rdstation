@@ -394,7 +394,6 @@ footer {
   display: none;
   position: fixed;
   z-index: 101;
-  padding-top: 16px;
   left: 0;
   top: 0;
   width: 100%;
@@ -421,7 +420,7 @@ footer {
   align-items: center;
 }
 
-.modal-body {
+.modal-video-container {
   width: 100%;
   position: relative;
   padding-bottom: 56.25%;
@@ -429,9 +428,9 @@ footer {
   overflow: hidden;
 }
 
-.modal-body iframe,
-.video-container object,
-.video-container embed {
+.modal-video-container iframe,
+.modal-video-container object,
+.modal-video-container embed {
   position: absolute;
   top: 0;
   left: 0;
