@@ -11,6 +11,7 @@
   <script src="scripts/menu.js" defer></script>
   <script src="scripts/input.js" defer></script>
   <script src="scripts/form.js" defer></script>
+  <script src="scripts/modal.js" defer></script>
   <title>RD Station</title>
 </head>
 <body>
@@ -238,19 +239,29 @@
     <div class="container">
       <div>
         <h2 class="heading-sm" >Entenda melhor como o RD Station Marketing funciona na prática</h2>
-        <div class="button-container ">
+        <div class="button-container" onclick="openModal('modal-video')">
           <button class="body-md button-secondary button-icon">assista a demonstração<img src="assets/icons/arrow-right.svg" alt="arrow  right"/></button>
         </div>
       </div>
 
       <div class="video-container">
         <img src="/assets/img-video-thumbnail.png" alt="Video Thumb">
-        <button>
+        <button onclick="openModal('modal-video')">
           <img src="assets/icons/play.svg" alt="Play Button">
         </button>
       </div>
     </div>
   </section>
+
+  <div class="modal" id="modal-video" onclick="closeModal('modal-video')">
+    <div class="modal-container card">
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe width="100%" height="400" src="https://www.youtube.com/embed/lGCesaaLi4s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <section class="section-logos container">
     <div class="section-logos-info-container">
