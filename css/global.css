@@ -49,7 +49,7 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url("assets/icons/arrow_select.svg") white no-repeat
+  background: url("../assets/icons/arrow_select.svg") white no-repeat
     calc(100% - 12px) !important;
 }
 

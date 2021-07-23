@@ -192,6 +192,8 @@ footer {
   justify-content: center;
   align-items: center;
   margin-left: 40px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .hero-section-form h4 {
@@ -221,6 +223,18 @@ footer {
 .hero-section-form-terms li a {
   color: var(--color-primary);
   text-decoration: underline;
+}
+
+#feedback-submit-container {
+  display: none;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#feedback-submit-container h3 {
+  text-align: center;
 }
 
 .results-section {
@@ -258,7 +272,7 @@ footer {
 }
 
 .results-section-list ul li {
-  list-style-image: url(assets/icons/check.svg);
+  list-style-image: url(../assets/icons/check.svg);
   margin-bottom: 24px;
 }
 
@@ -297,7 +311,7 @@ footer {
 }
 
 .section-create-account-background {
-  background: url(/assets/background.svg) no-repeat center;
+  background: url(../assets/background.svg) no-repeat center;
   display: flex;
   flex-direction: column;
   justify-content: center;

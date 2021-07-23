@@ -42,9 +42,13 @@ const handleSubmit = (formData) => {
 document.getElementById("form").addEventListener("submit", (e) => {
   e.preventDefault();
 
+  const feedbackSubmit = document.getElementById("feedback-submit-container");
+
   const validatedForm = validateForm(e.target);
   if(validatedForm) {
     const formData = new FormData(e.target);
-    handleSubmit(formData);
+    //handleSubmit(formData);
+    e.target.style.display = 'none';
+    feedbackSubmit.style.display = 'flex';
   }
 })
