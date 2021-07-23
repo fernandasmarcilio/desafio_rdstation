@@ -7,7 +7,7 @@ Clone o repositório e abre o arquivo index.html
 Eu resolvi não utilizar stacks para sair da zona de conforto, ser desafiador e ver até aonde consigo ir. 
 Fiz em HTML, CSS e JS sem nenhum framework.
 
-Eu dividi as tarefas por seção do protótipo no figma, como cabeçalho, rodapé, form...
+Eu dividi as tarefas por seção do protótipo no figma, como cabeçalho, rodapé, form, video ...
 Para cada tarefa, eu fiz o esqueleto com as tags HTML, depois estilizava no CSS para versão desktop e por fim fazia os ajustes necessários para versão mobile.
 
 ## Dificuldades
@@ -15,5 +15,10 @@ Eu estava a muito tempo sem desenvolver para web apenas com HTML, CSS e JS puro.
 
 Outra parte desafiadora foi deixar tudo responsivo, em minha experiência eu usei bastante flex mas pouco grid. Nesse desafio consegui colocar em prática o grid e aprender mais sobre.
 
-A validação do formulário foi bem complicada, fiquei um bom tempo até entender um pouco sobre "setCustomValidity" mas não consegui aplicar isso para o input confirmar senha e URL. Então adicinei um span para mostrar os erros desses inputs.
+A validação do formulário foi bem complicada, fiquei um bom tempo até entender um pouco sobre "setCustomValidity" mas não consegui aplicar isso para o input confirmar senha e URL. Então adicionei um span para mostrar os erros desses inputs.
 
+## O que faltou
+Não deu de implementar o slider na versão mobile, o menu na versão mobile não esta completo, o menu em geral falta o "dropdown" e não deu de implementar o envio do formulário para a url solicitada. Além disso, o visual da validação do formulário precisa melhorar para ficar consistente.
+
+## Conclusão
+Por mais que eu tenha saido da zona do conforto em não utilizar o React, eu aprendi bastante coisa. Principalmente sobre responsividade, nas minhas experiências não apliquei responsividade e foi divertido aprender e aplicar no desafio.  
