@@ -133,7 +133,7 @@
 
   .results-section {
     align-items: start;
-    margin-top: -5px;
+    margin-top: 0;
   }
 
   .results-section .container {
@@ -147,6 +147,10 @@
 
   .results-section .container {
     flex-direction: column-reverse;
+  }
+
+  .results-section .container img {
+    width: 100%;
   }
 
   .card {
@@ -221,5 +225,11 @@
 
   .section-logos .section-logos-button {
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 995px) {
+  .cards-section-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

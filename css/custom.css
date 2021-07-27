@@ -242,6 +242,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: -1.5rem;
 }
 
 .results-section::after {
@@ -263,8 +264,8 @@ footer {
 
 .results-section .container img {
   clip-path: polygon(0 0, 69% 0, 100% 22%, 100% 100%, 0 100%);
-  width: 100%;
-  height: 100%;
+  width: 25rem;
+  height: auto;
 }
 
 .results-section-list ul {
@@ -351,7 +352,10 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 24px;
+}
+
+.video-container img {
+  width: 100%;
 }
 
 .video-container button {
