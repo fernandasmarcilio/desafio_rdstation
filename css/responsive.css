@@ -1,39 +1,93 @@
 @media screen and (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
   header {
     height: auto;
-    padding: 24px 0;
+    padding: 0;
   }
 
   header .container {
     flex-direction: column;
+    padding: 0;
   }
 
   .logo-header-container {
     width: 100%;
+    align-items: center;
+    padding: 24px 0 16px 0;
+    background-color: white;
+    z-index: 101;
+  }
+
+  .logo-header-container img,
+  .logo-header-container div {
+    margin: 0 16px;
   }
 
   .menu {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 0;
-    transition: height 0.3s;
+    max-height: 0;
+    margin: 0;
+    border-top: 1px solid var(--color-gray-30);
+    transition: max-height 0.3s ease-in;
+    z-index: 100;
+    background-color: white;
+  }
+
+  .menu ul {
+    padding: 0 16px;
+    width: 95%;
+  }
+
+  .menu ul li {
+    margin: 0;
   }
 
   .menu-list {
     display: none;
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 24px;
+  }
+
+  .menu-list li {
+    width: 100%;
+    padding: 16px 0;
+  }
+
+  .menu-list li:not(:last-child) {
+    border-bottom: 1px solid var(--color-gray-30);
   }
 
   .menu-buttons-container {
     display: none;
     width: 100%;
     justify-content: space-evenly;
+    padding: 24px 0;
+    margin: 0;
+    background-color: var(--color-gray-10);
+    border-top: 1px solid var(--color-gray-30);
   }
 
   label[for="bt-menu"] {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #close-menu-icon {
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.3s;
+  }
+
+  #menu-icon {
+    opacity: 1;
+    transition: opacity 0.3s;
   }
 
   .footer-social {
@@ -77,6 +131,11 @@
     margin-left: 0;
   }
 
+  .results-section {
+    align-items: start;
+    margin-top: -5px;
+  }
+
   .results-section .container {
     gap: 0;
   }
@@ -88,6 +147,10 @@
 
   .results-section .container {
     flex-direction: column-reverse;
+  }
+
+  .card {
+    padding: 16px;
   }
 
   .cards-section {
