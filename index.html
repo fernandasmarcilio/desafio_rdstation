@@ -71,26 +71,29 @@
           <div class="divider"></div>
         </div>
 
-        <form name="form" id="form">
+        <form name="form" id="form" novalidate>
 
           <div class="input-container">
             <label for="name">Diga, qual seu nome?</label>
-            <input required type="text" name="name" id="name" placeholder="Insira seu nome">
+            <input required class="form-input" type="text" name="name" id="name" placeholder="Insira seu nome" onchange="handleInputOnChange(this)" onblur="handleInputOnChange(this)">
+            <span id="name_error"></span>
           </div>
 
           <div class="input-container">
             <label for="email">Seu email de trabalho</label>
-            <input required type="email" name="email" placeholder="Insira seu e-mail">
+            <input required class="form-input" type="email" name="email" id="email" placeholder="Insira seu e-mail" onchange="handleInputOnChange(this)" onblur="handleInputOnChange(this)">
+            <span id="email_error"></span>
           </div>
 
           <div class="input-container">
             <label for="phone">Seu telefone</label>
-            <input required id="tel" name="tel" maxlength="15" pattern="\(\d{2}\)\s*\d{4,5}-\d{4}" placeholder="Insira seu número de telefone com DDD">
+            <input required class="form-input" id="tel" name="tel" maxlength="15" pattern="\(\d{2}\)\s*\d{4,5}-\d{4}" placeholder="Insira seu número de telefone com DDD" onchange="handleInputOnChange(this)" onblur="handleInputOnChange(this)">
+            <span id="tel_error"></span>
           </div>
 
           <div class="input-container">
             <label for="occupation_position">Seu cargo de ocupação</label>
-            <select name="occupation_position" required>
+            <select name="occupation_position" required class="form-input" id="occupation_position" onchange="handleInputOnChange(this)" onblur="handleInputOnChange(this)">
               <option value="" disabled selected>Selecione seu cargo</option>
               <option value="socio_ceo_proprietario">Sócio(a) / CEO / Proprietário(a)</option>>
               <option value="diretor_vendas">Diretor(a) de Vendas</option>>
@@ -106,34 +109,36 @@
               <option value="estudante">Estudante</option>>
               <option value="outros">Outros Cargos</option>>
             </select>
+            <span id="occupation_position_error"></span>
           </div>
 
           <div class="input-container">
             <label for="password">Crie uma senha</label>
             <div class="input-password-container">
-              <input required type="password" name="password" placeholder="••••••••" id="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,10}">
+              <input required class="form-input" type="password" name="password" placeholder="••••••••" id="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,10}" onchange="handleInputOnChange(this)" onblur="handleInputOnChange(this)">
               <img src="/assets/icons/close_eye.svg" alt="icon eye visibility" id="show_password">
             </div>
+            <span id="password_error"></span>
           </div>
 
           <div class="input-container">
             <label for="confirm_password">Confirme sua senha</label>
             <div class="input-password-container">
-              <input required type="password" name="confirm_password" placeholder="••••••••" id="confirm_password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,10}">
+              <input required class="form-input" type="password" name="confirm_password" placeholder="••••••••" id="confirm_password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,10}" onchange="handleInputOnChange(this)" onblur="handleInputOnChange(this)">
               <img src="/assets/icons/close_eye.svg" alt="icon eye visibility" id="show_confirm_password">
             </div>
-            <span id="confirm_password_error">Senhas diferentes</span>
+            <span id="confirm_password_error"></span>
           </div>
 
           <div class="input-container">
             <div class="radio-container">
-              <input type="radio" name="url" value="true" required>
+              <input type="radio" name="url" value="true" checked class="form-input" id="url" onchange="handleInputOnChange(this)" onblur="handleInputOnChange(this)">
               <label for="url">Meu site é</label>
             </div>
-            <input type="url" name="url_value" placeholder="Insira o endereço do seu site">
-            <span id="url_value_error">Insira a URL do seu site</span>
+            <input type="url" class="form-input" name="url_value" id="url_value" placeholder="Insira o endereço do seu site" onchange="handleInputOnChange(this)" onblur="handleInputOnChange(this)">
+            <span id="url_value_error"></span>
             <div class="radio-container">
-              <input type="radio" name="url" value="false">
+              <input type="radio" name="url" value="false" onchange="handleInputOnChange(this)" onblur="handleInputOnChange(this)">
               <label for="url">Ainda não tenho site</label>
             </div>
           </div>
