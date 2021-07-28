@@ -166,19 +166,16 @@
   }
 
   .cards-section-container {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
     margin-top: 64px;
-    justify-content: space-between;
-    align-items: center;
-    width: 620%;
+    width: 600%;
     height: 500px;
   }
 
   .cards-section-container .card {
     height: 378px;
-    width: 100%;
+    width: auto;
   }
 
   .cards-section-icon-container {
@@ -228,7 +225,7 @@
   }
 }
 
-@media screen and (max-width: 995px) {
+@media screen and (max-width: 995px) and (min-width: 769px) {
   .cards-section-container {
     grid-template-columns: repeat(2, 1fr);
   }

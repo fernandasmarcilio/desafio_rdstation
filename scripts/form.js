@@ -42,7 +42,6 @@ const handleSubmit = (formElement) => {
 document.getElementById("form").addEventListener("submit", (e) => {
   e.preventDefault();
   const formIsValid = validateForm(e.target);
-  console.log(formIsValid)
   if(formIsValid) {
    handleSubmit(e.target);
    handleRenderFeedback(e.target);
@@ -115,6 +114,9 @@ const styleInputElementWithoutError = (inputElement, spanError) => {
 
 const handleRenderFeedback = (formElement) => {
   const feedbackSubmit = document.getElementById("feedback-submit-container");
+  const formCard = document.getElementById('form-card');
+  formCard.style.height = `${formCard.offsetHeight/2}px`;
+  formCard.style.width = `${formCard.offsetWidth}px`;
   formElement.style.display = 'none';
   feedbackSubmit.style.display = 'flex';
 }
