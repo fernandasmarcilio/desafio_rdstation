@@ -12,10 +12,10 @@ const changePasswordVisibility = (passwordInputId, passwordIcon) => {
   const passwordInput = document.getElementById(passwordInputId);
   if(passwordInput.type === 'password') {
     passwordInput.type = 'text';
-    passwordIcon.src = '/assets/icons/open_eye.svg'
+    passwordIcon.src = 'assets/icons/open_eye.svg'
   }else {
     passwordInput.type = 'password';
-    passwordIcon.src = '/assets/icons/close_eye.svg'
+    passwordIcon.src = 'assets/icons/close_eye.svg'
   }
 }
 
