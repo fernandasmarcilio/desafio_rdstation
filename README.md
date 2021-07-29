@@ -3,6 +3,10 @@
 ## Como rodar o projeto
 Clone o repositório e abre o arquivo index.html
 
+Navegadores testados:
+- Firefox
+- Brave
+
 ##  Estratégia
 Eu resolvi não utilizar stacks para sair da zona de conforto, ser desafiador e ver até aonde consigo ir. 
 Fiz em HTML, CSS e JS sem nenhum framework.
