@@ -15,6 +15,11 @@ header {
 
 .logo {
   height: 32px;
+  display: block;
+}
+
+.logo-icon {
+  display: none;
 }
 
 .center {
@@ -41,15 +46,60 @@ header {
 .menu ul li {
   list-style: none;
   font-weight: 700;
-  transition: color 0.3s;
   margin: 0 8px;
 }
 
-.menu ul li:hover {
-  list-style: none;
-  font-weight: 700;
+.menu ul li a {
+  color: var(--color-black);
+  transition: color 0.3s;
+}
+
+.menu ul li a:hover {
   color: var(--color-primary);
-  cursor: pointer;
+}
+
+.menu .dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu .dropdown img {
+  margin-left: 8px;
+}
+
+.menu .dropdown .submenu-container {
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  position: absolute;
+  background: var(--color-white);
+  padding: 24px;
+  justify-content: center;
+  top: 85px;
+  transition: opacity 0.3s;
+}
+
+.submenu-container div:not(:last-child) {
+  margin-right: 24px;
+}
+
+.menu .dropdown .submenu-container img {
+  display: none;
+}
+
+.submenu-container .submenu-title {
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-gray-30);
+}
+
+.submenu-container ul li {
+  margin: 16px 0 0 0;
 }
 
 #bt-menu {

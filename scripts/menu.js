@@ -23,3 +23,26 @@ const openMenu = () => {
     menuIcon.style.opacity = 1;
   }
 }
+
+const openSubmenu = (element) => {
+  const submenuElement = document.getElementById(`submenu-${element.id}`);
+
+  if(submenuElement.style.visibility === 'hidden' || submenuElement.style.visibility === '') {
+    submenuElement.style.visibility = "visible";
+    submenuElement.style.opacity = 1;
+  }else {
+    submenuElement.style.visibility = "hidden";
+    submenuElement.style.opacity = 0;
+    containerElement.style.maxHeight = "500px";
+  }
+}
+
+const closeSubmenu = (element) => {
+  const submenuElement = document.getElementById(`submenu-${element.id}`);
+  submenuElement.style.visibility = "hidden";
+  submenuElement.style.opacity = 0;
+}
+
+document.getElementById('submenu-02').addEventListener("click", (event) => {
+  event.stopPropagation();
+})
