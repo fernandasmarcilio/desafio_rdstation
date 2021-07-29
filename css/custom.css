@@ -225,6 +225,39 @@ footer {
   text-decoration: underline;
 }
 
+.radio-container {
+  display: flex;
+  align-items: center;
+}
+
+.radio-container input {
+  display: none;
+}
+
+.radio-container label {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid var(--color-gray-30);
+  margin: 0 16px 0 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.radio-container label:hover,
+input[name="url"]:checked + label {
+  border-color: var(--color-primary);
+  box-shadow: inset 0px 0px 0px 4px var(--color-primary);
+  background-color: var(--color-black);
+}
+
+.radio-container span {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-black);
+}
+
 #feedback-submit-container {
   display: none;
   width: 100%;
@@ -307,8 +340,31 @@ footer {
   align-items: center;
 }
 
+.cards-section-button {
+  visibility: hidden;
+}
+
 .section-create-account {
   margin: 120px auto;
+}
+
+input[name="cards-slider"] {
+  visibility: hidden;
+}
+
+.cards-section-button label {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--color-gray-30);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cards-section-button label:hover,
+input[name="cards-slider"]:checked + label {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 .section-create-account-background {

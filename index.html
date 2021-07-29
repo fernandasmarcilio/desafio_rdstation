@@ -132,14 +132,16 @@
 
           <div class="input-container">
             <div class="radio-container">
-              <input type="radio" name="url" value="true" checked class="form-input" id="url" onchange="handleInputOnChange(this)" onblur="handleInputOnChange(this)">
-              <label for="url">Meu site é</label>
+              <input type="radio" name="url" id="url-true" value="true" checked class="form-input" id="url" onchange="handleInputOnChange(this)" onblur="handleInputOnChange(this)">
+              <label for="url-true"> </label>
+              <span>Meu site é</span>
             </div>
             <input type="url" class="form-input" name="url_value" id="url_value" placeholder="Insira o endereço do seu site" onchange="handleInputOnChange(this)" onblur="handleInputOnChange(this)">
             <span id="url_value_error"></span>
             <div class="radio-container">
-              <input type="radio" name="url" value="false" onchange="handleInputOnChange(this)" onblur="handleInputOnChange(this)">
-              <label for="url">Ainda não tenho site</label>
+              <input type="radio" name="url" id="url-false" value="false" onchange="handleInputOnChange(this)" onblur="handleInputOnChange(this)">
+              <label for="url-false"></label>
+              <span>Ainda não tenho site</span>
             </div>
           </div>
 
@@ -182,9 +184,9 @@
   <section class="cards-section container">
     <h2 class="heading-md">A ferramenta de Automação de Marketing líder na América Latina</h2>
     
-    <div class="cards-section-container">
+    <div class="cards-section-container" id="cards-container">
 
-      <div class="card">
+      <div class="card card-01">
         <div class="cards-section-icon-container">
           <img src="assets/icons/icon.svg" alt="Icon card">
         </div>
@@ -192,7 +194,7 @@
         <p class="body-md">Chega de usar várias ferramentas separadas e perder as informações no caminho! Somos o que chamam de ferramenta tudo-em-um: reunimos os principais recursos de Marketing Digital em um só lugar para sua operação ser mais eficaz.</p>
       </div>
 
-      <div class="card">
+      <div class="card card-02">
         <div class="cards-section-icon-container">
           <img src="assets/icons/icon-1.svg" alt="Icon card">
         </div>
@@ -200,7 +202,7 @@
         <p class="body-md">É fácil usar o RD Station Marketing, porque suas funcionalidades são simples, mas poderosas, e contam com dezenas de modelos — como de Landing Pages, Pop-ups, emails — para diversas ocasiões e segmentos que você pode personalizar de acordo com a sua campanha.</p>
       </div>
 
-      <div class="card">
+      <div class="card card-03">
         <div class="cards-section-icon-container">
           <img src="assets/icons/icon-2.svg" alt="Icon card">
         </div>
@@ -208,7 +210,7 @@
         <p class="body-md">Envie a mensagem certa na hora certa e construa jornadas personalizadas que geram até 5x mais conversões e guiam Leads até a compra. Automatize também suas tarefas e aumente a produtividade de Marketing e Vendas.</p>
       </div>
 
-      <div class="card">
+      <div class="card card-04">
         <div class="cards-section-icon-container">
           <img src="assets/icons/icon-3.svg" alt="Icon card">
         </div>
@@ -216,7 +218,7 @@
         <p class="body-md">Conheça melhor seu público, de acordo com as informações capturadas nas suas páginas e formulários. Defina critérios para identificar automaticamente Leads com maior potencial de compra e envie para o comercial oportunidades qualificadas.</p>
       </div>
 
-      <div class="card">
+      <div class="card card-05">
         <div class="cards-section-icon-container">
           <img src="assets/icons/icon-4.svg" alt="Icon card">
         </div>
@@ -224,7 +226,7 @@
         <p class="body-md">Ao invés de fazer uma série de ações isoladas, sem saber qual funciona, junte as informações de todos os seus contatos e suas ações em diferentes canais com recursos de análise para provar que Marketing Digital traz mais vendas e clientes.</p>
       </div>
 
-      <div class="card">
+      <div class="card card-06">
         <div class="cards-section-icon-container">
           <img src="assets/icons/icon-5.svg" alt="Icon card">
         </div>
@@ -232,6 +234,20 @@
         <p class="body-md">Nosso time de suporte técnico está disponível quando você precisar, com uma taxa de satisfação de 97% entre nossos clientes e um tempo médio de resolução de 6 horas. E o melhor: tudo isso em português.</p>
       </div>
 
+    </div>
+    <div class="cards-section-button">
+      <input type="radio" name="cards-slider" id="button-card-01" value="0" checked onclick="handleCardChange(this)">
+      <label for="button-card-01"></label>
+      <input type="radio" name="cards-slider" id="button-card-02" value="100" onclick="handleCardChange(this)">
+      <label for="button-card-02"></label>
+      <input type="radio" name="cards-slider" id="button-card-03" value="200" onclick="handleCardChange(this)">
+      <label for="button-card-03"></label>
+      <input type="radio" name="cards-slider" id="button-card-04" value="300" onclick="handleCardChange(this)">
+      <label for="button-card-04"></label>
+      <input type="radio" name="cards-slider" id="button-card-05" value="400" onclick="handleCardChange(this)">
+      <label for="button-card-05"></label>
+      <input type="radio" name="cards-slider" id="button-card-06" value="500" onclick="handleCardChange(this)">
+      <label for="button-card-06"></label>
     </div>
   </section>
 

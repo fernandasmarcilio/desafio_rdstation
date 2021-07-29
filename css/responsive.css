@@ -168,9 +168,9 @@
   .cards-section-container {
     grid-template-columns: repeat(6, 1fr);
     gap: 16px;
-    margin-top: 64px;
+    margin: 64px 0 24px 0;
     width: 600%;
-    height: 500px;
+    transition: all 0.3s;
   }
 
   .cards-section-container .card {
@@ -181,6 +181,12 @@
   .cards-section-icon-container {
     width: 48px;
     height: 48px;
+  }
+
+  .cards-section-button {
+    visibility: visible;
+    display: flex;
+    justify-content: center;
   }
 
   .section-create-account h2 {
@@ -228,5 +234,6 @@
 @media screen and (max-width: 995px) and (min-width: 769px) {
   .cards-section-container {
     grid-template-columns: repeat(2, 1fr);
+    margin-left: 0;
   }
 }

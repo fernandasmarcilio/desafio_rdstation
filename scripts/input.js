@@ -41,3 +41,16 @@ passwordInput.oninvalid = () => {
    }
 };
 
+
+const handleCardChange = (element) => {
+  const cardElement = document.getElementById("cards-container");
+  element.checked = true;
+  cardElement.style.marginLeft = `-${element.value}%`;
+}
+
+window.addEventListener('resize', (event) => {
+  if(event.target.innerWidth >= '769'){
+    const cardElement = document.getElementById("cards-container");
+    cardElement.style.marginLeft = '0';
+  }
+}) 
